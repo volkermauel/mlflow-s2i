@@ -16,10 +16,10 @@ For a local build you can use
 This Image requires the following environment-variables to be set:
 - BACKEND_STORE - Can be set to a Database or a local sqlite file
 - ARTIFACT_ROOT - Set this to an s3 Bucket
-The Image will listen on **PORT 5000**
+The Image will listen on **PORT 8080**
 
 Example of running the image locally
-`docker run -it --rm -p 5000:5000 -e BACKEND_STORE="sqlite:////data/my_data.db" -e ARTIFACT_ROOT="s3://MY_S3_BUCKET" -v mlflow:/data`
+`docker run -it --rm -p 8080:8080 -e BACKEND_STORE="sqlite:////data/my_data.db" -e ARTIFACT_ROOT="s3://MY_S3_BUCKET" -v mlflow:/data`
 This will create a local volume "mlflow" if it doesn't exist already, mount it into the container at **/data** and create an sqlite-database there.
 
 Artifacts will be served using s3.

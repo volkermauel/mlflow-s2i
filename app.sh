@@ -2,4 +2,5 @@
 mlflow server \
     --backend-store-uri "$BACKEND_STORE" \
     --default-artifact-root "$ARTIFACT_ROOT" \
-    --host 0.0.0.0
+    --host 0.0.0.0 \
+    --port 8080
